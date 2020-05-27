@@ -10,7 +10,7 @@ router.use(express.static(path.join(__dirname+'./../views')));
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended:true}));
 
-router.get('/',(req,res)=>{
+router.post('/',(req,res)=>{
     res.render('index');
 });
 

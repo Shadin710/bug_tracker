@@ -14,15 +14,25 @@ app.set('views','./views');
 
 app.use(morgan('dev'));
 
-
+//some landing page 
 app.get('/',(req,res)=>{
     res.render('log');
 });
+app.get('/register',(req,res)=>{
+    res.render('reg');
+});
+//end
+
+//main api 
 app.use('/homepage',home);
 
 
+
+
+
+//starting the server
 app.listen(port,()=>{
     console.log(`Listeing to ${port}....`);
 });
-
+//end
 
