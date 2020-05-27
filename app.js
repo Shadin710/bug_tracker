@@ -4,9 +4,9 @@ const bodyParser =  require('body-parser');
 const morgan = require('morgan');
 const path =  require('path');
 const home =  require('./routes/home');
-
+const database =  require('./database');
 const port = process.env.PORT || 3000;
-
+const mongoose =  require('mongoose');
 app.use(express.static(path.join(__dirname,'./views')));
 
 app.set('view engine','ejs');
