@@ -25,6 +25,7 @@ app.get('/register',(req,res)=>{
 
 //main api 
 app.use('/homepage',home);
+app.use('/create',create);
 
 
 
