@@ -24,7 +24,7 @@ app.get('/register',(req,res)=>{
     res.render('reg');
 });
 //end
-
+ 
 //main api 
 app.use('/homepage',home);
 app.use('/create',create);

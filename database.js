@@ -1,18 +1,12 @@
 const mongoose =  require('mongoose');
 const assert = require('assert');
-const db_url =  process.env.DB_URL;
+const uri =  process.env.URI;
 
 mongoose.connect(
-    db_url,
+    uri,
     {
-        useCreateIndex: true,
-        useMongoClient: true,
-        useUnifiedTopology:true,
-        useNewUrlParser:true
-    },
-    (error,link)=>{
-        assert.equal(error,null,'DB connection failed');
-        console.log('DB connection established......');
-        console.log(link);
-    }
-);
+        useCreateIndex:true,
+        useNewUrlParser:true,
+        useUnifiedTopology: true,
+        serverSelectionTimeoutMS: 5000
+    }).catch(err=>console.log(err)); 

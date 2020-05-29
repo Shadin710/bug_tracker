@@ -55,7 +55,7 @@ router.post('/',
         }
 
         //everything is good
-        res.redirect('/home');
+        res.send('working');
     } );
 });
 
