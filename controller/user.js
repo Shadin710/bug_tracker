@@ -13,7 +13,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 router.post('/',
 [
-    check('first').not(),isEmpty().trim().escape(),
+    check('first').not().isEmpty().trim().escape(),
     check('last').not().isEmpty().trim().escape(),
     check('username').not().isEmpty().trim().escape(),
     check('email').isEmail().normalizeEmail(),
@@ -34,7 +34,7 @@ router.post('/',
     }
 
     //no error
-    const hased =  bcrypt.hashSync(req.body.pass,10);
+    const hashed =  bcrypt.hashSync(req.body.pass,10);
 
     user.create(
     {
@@ -55,7 +55,7 @@ router.post('/',
         }
 
         //everything is good
-        res.redirect('/');
+        res.redirect('/home');
     } );
 });
 
