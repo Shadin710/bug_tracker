@@ -60,7 +60,7 @@ router.post('/',
         {
             res.redirect('/');
         }
-    })
+    });
 });
 
 
